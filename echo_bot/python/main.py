@@ -27,7 +27,7 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
                 CreateMessageRequestBody.builder()
                 .receive_id(data.event.message.chat_id)
                 .msg_type("text")
-                .content("Hello World 3")
+                .content("Hello World 5")
                 .build()
             )
             .build()

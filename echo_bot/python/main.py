@@ -15,7 +15,11 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
 
     content = json.dumps(
         {
-            "text": "Hello World 4"
+            "type": "template"
+            "data": {
+                "template_id": "AAq9PTe1cWp0n"
+                "template_version_name": "1.0.4"
+            }
         }
     )
 
@@ -26,8 +30,8 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
             .request_body(
                 CreateMessageRequestBody.builder()
                 .receive_id(data.event.message.chat_id)
-                .msg_type("text")
-                .content("{\"text\":\"test content\"}")
+                .msg_type("interactive")
+                .content(content)
                 .build()
             )
             .build()

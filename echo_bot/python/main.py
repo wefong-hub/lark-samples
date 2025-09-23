@@ -15,7 +15,7 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
 
     content = json.dumps(
         {
-            "text": "Hello World 2"
+            "text": "Hello World 4"
         }
     )
 

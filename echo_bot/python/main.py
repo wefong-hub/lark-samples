@@ -27,8 +27,8 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
             .request_body(
                 CreateMessageRequestBody.builder()
                 .receive_id(data.event.message.chat_id)
-                .msg_type("interactive")
-                .content("{\"type\":\"template\",\"data\":{\"template_id\":\"AAq9PTe1cWp0n\",\"template_version_name\":\"1.0.3\"}}")
+                .msg_type("text")
+                .content(content)
                 .build()
             )
             .build()

@@ -48,7 +48,7 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
             .request_body(
                 ReplyMessageRequestBody.builder()
                 .content("{\"type\":\"template\",\"data\":{\"template_id\":\"AAq9PTe1cWp0n\"}")
-                .msg_type("text")
+                .msg_type("interactive")
                 .build()
             )
             .build()

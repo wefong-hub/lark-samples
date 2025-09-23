@@ -15,9 +15,9 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
 
     content = json.dumps(
         {
-            "type": "template"
+            "type": "template",
             "data": {
-                "template_id": "AAq9PTe1cWp0n"
+                "template_id": "AAq9PTe1cWp0n",
                 "template_version_name": "1.0.4"
             }
         }

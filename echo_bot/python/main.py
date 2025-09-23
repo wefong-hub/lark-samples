@@ -15,8 +15,7 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
 
     content = json.dumps(
         {
-            "text": "Received messages_3:"
-            + res_content
+            "text": "Hello World 2"
         }
     )
 
@@ -28,7 +27,7 @@ def do_p2_im_message_receive_v1(data: P2ImMessageReceiveV1) -> None:
                 CreateMessageRequestBody.builder()
                 .receive_id(data.event.message.chat_id)
                 .msg_type("text")
-                .content("Hello World")
+                .content(content)
                 .build()
             )
             .build()
